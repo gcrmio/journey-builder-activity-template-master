@@ -8,7 +8,7 @@
 "use strict";
 
 var request = require('request');
-
+const nodeHtmlToImage = require('node-html-to-image');
 // ----------------------------------------------------------------------------------------------------
 
 module.exports.checkapi = function (req, res) {
@@ -350,6 +350,11 @@ function convertContent(atoken) {
         console.log("Content Info ==============================================================================================");
         var content = tmp.content;
         console.log(content);
+        console.log("***");
+        nodeHtmlToImage({
+            output: './image.png',
+            html: content
+        }).then(() => console.log("The image was created successfully!"))
         console.log("===========================================================================================================");
         console.log("");
 
