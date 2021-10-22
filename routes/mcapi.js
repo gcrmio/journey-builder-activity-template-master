@@ -59,6 +59,8 @@ module.exports.checkapi = function (req, res) {
 
         loadContent(tmp.access_token); 
 
+        convertContent(tmp.access_token);
+
     });
     
     // 01. Get Auth Token
