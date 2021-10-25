@@ -354,7 +354,7 @@ function convertContent(atoken) {
         nodeHtmlToImage({
             output: './image.png',
             html: content
-        }).then(() => console.log("The image was created successfully!"))
+        }).then(() => console.log("The image was created successfully!"));
         console.log("===========================================================================================================");
         console.log("");
 
