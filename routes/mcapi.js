@@ -9,10 +9,12 @@
 
 var request = require('request');
 const nodeHtmlToImage = require('node-html-to-image');
-const browser = await puppeteer.launch({
-    headless: true,
-    args: ['--no-sandbox']
-    })
+(async() => {
+
+    const browser = await puppeteer.launch({
+        args: ['--no-sandbox']
+    });
+})();
 // ----------------------------------------------------------------------------------------------------
 
 module.exports.checkapi = function (req, res) {
