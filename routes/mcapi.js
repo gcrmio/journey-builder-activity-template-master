@@ -8,7 +8,9 @@
 "use strict";
 
 var request = require('request');
+var puppeteer = require('puppeteer');
 const nodeHtmlToImage = require('node-html-to-image');
+
 (async() => {
 
     const browser = await puppeteer.launch({
